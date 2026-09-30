@@ -23,13 +23,47 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata = {
+  // ── Core ─────────────────────────────────────────────────────────────
   title: 'WorldClock — by Straw Hat Devs',
   description:
-    'A free open-source world clock widget tool. Add digital or analog clocks for any timezone — built by Straw Hat Devs.',
+    'Track time across the globe — digital or analog, your way. A free open-source world clock widget tool.',
+
+  // ── PWA manifest + theme ─────────────────────────────────────────────
+  manifest: '/manifest.json',
+  themeColor: '#19D7C1',
+
+  // ── Viewport ──────────────────────────────────────────────────────────
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
+
+  // ── Apple PWA ─────────────────────────────────────────────────────────
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'WorldClock',
+  },
+
+  // ── Icons ─────────────────────────────────────────────────────────────
+  icons: {
+    icon: [
+      { url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/icons/apple-touch-icon.png', sizes: '1024x1024', type: 'image/png' },
+    ],
+    shortcut: '/icons/icon-192.png',
+  },
+
+  // ── Open Graph ────────────────────────────────────────────────────────
   openGraph: {
     title: 'WorldClock by Straw Hat Devs',
-    description: 'Add digital or analog clock widgets for 55+ timezones.',
+    description: 'Add digital or analog clock widgets for 80+ timezones. Free & open source.',
     type: 'website',
+    images: [{ url: '/icons/icon-512.png' }],
   },
 }
 
