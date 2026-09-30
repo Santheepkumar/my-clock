@@ -1,3 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ─── Straw Hat Devs Brand Tokens ──────────────────────────────────────── */
+:root {
+  --shd-midnight:  #06131F;
+  --shd-ocean:     #0B2236;
+  --shd-teal:      #19D7C1;
+  --shd-teal-dark: #00666F;
+  --shd-gold:      #F7C648;
+  --shd-sand:      #FFF2A8;
+  --shd-ember:     #8E420E;
+  --shd-white:     #F8FDFF;
+}
+
+/* ─── Base ─────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--shd-midnight);
+  color: var(--shd-white);
+  font-family: 'Inter', 'DejaVu Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* ─── Custom Scrollbar ─────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--shd-ocean);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--shd-teal-dark);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--shd-teal);
+}
+
+/* ─── Selection ────────────────────────────────────────────────────────── */
+::selection {
+  background: rgba(25, 215, 193, 0.25);
+  color: var(--shd-white);
+}
+
+/* ─── Focus ring ───────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--shd-teal);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ─── Modal body-lock ──────────────────────────────────────────────────── */
+body.modal-open {
+  overflow: hidden;
+}

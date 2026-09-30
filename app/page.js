@@ -1,17 +1,11 @@
-import Clocks from '@/components/Clocks'
+import ClockBoard from '@/components/ClockBoard'
 
 export const metadata = {
-  title: 'Your Clock',
-  description: 'Little Clock app',
-  author: 'Santheepkumar',
-  ogTitle: 'Your Clock',
-  ogType: 'website',
-  ogUrl: 'https://www.santheepkumar.vercel.app',
-  ogImage: 'https://santheepkumar.vercel.app/static/images/banner.png',
-};
+  title: 'WorldClock — by Straw Hat Devs',
+  description:
+    'A free open-source world clock widget tool. Add digital or analog clocks for any timezone.',
+}
 
 export default function Home() {
-  return (
-    <Clocks />
-  )
+  return <ClockBoard />
 }
